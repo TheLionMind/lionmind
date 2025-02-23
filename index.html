@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pré-venda LionMind (LMND)</title>
+
+</head>
+
+<body>
+    <div class="container" id="main-page">
+        <img src="image/LMND.jpg" alt="LionMind Logo" class="logo">
+        <div class="section">
+            <h2>O que é LionMind (LMND)?</h2>
+            <p> O LionMind (LMND) é a moeda digital revolucionária que vai impulsionar seu desenvolvimento pessoal,
+                aprendizado e produtividade, com recompensas para quem se dedica a ser a melhor versão de si mesmo. Ao
+                completar desafios, cursos, tarefas de leitura e atividades saudáveis, você ganha LMND, acumulando valor
+                e reconhecimento pelas suas conquistas. </p>
+            <h2>Como Funciona?</h2>
+            <p>Toda vez que você realiza uma ação que contribui para seu crescimento, como completar um curso de
+                autodesenvolvimento, atingir metas de leitura ou alcançar marcos de hábitos saudáveis, você ganha LMND –
+                a moeda que reflete seu esforço e determinação. Não é apenas uma recompensa digital, é o reconhecimento
+                real de cada passo que você dá em direção ao sucesso.</p>
+            <h2>O que torna o LionMind Único?</h2>
+            <p>Desafios de Crescimento Pessoal: Defina metas, complete tarefas e veja sua evolução refletida na sua
+                conta.</p>
+            <p>Recompensas e Reconhecimento: Cada desafio superado gera LMND, tornando sua jornada tangível e
+                gratificante.</p>
+            <p>Futuro Brilhante: Em breve, o LionMind será integrado com um app de hábitos inteligente, que personaliza
+                os desafios para você. Além disso, haverá NFTs colecionáveis para celebrar suas maiores conquistas!</p>
+            <h2>Por que Participar?</h2>
+            <p>Motivação e Sucesso Pessoal: LionMind é mais do que uma moeda. É uma mentalidade. Uma forma de
+                transformar cada pequena vitória em um grande passo rumo aos seus objetivos.</p>
+            <p>Comemore sua evolução: Cada desafio completado é uma prova do seu compromisso com seu próprio sucesso. Ao
+                acumular LMND, você verá seu progresso refletido de forma significativa, além de desbloquear recompensas
+                especiais.</p>
+            <p>Exclusividade e Impacto: Com o app de hábitos, o LionMind evolui com você, oferecendo desafios
+                personalizados para manter sua jornada motivadora. E, ao acumular LMND, você ganhará NFTs exclusivos,
+                celebrando suas maiores vitórias.</p>
+            <p></p>
+        </div>
+
+        <div class="progress-section">
+            <h1>Progresso da Pré-venda</h1>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">10%</div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2 class="Preco">Preço do Token: 0.0001 BNB por LMND</h2>
+
+            <h3>Calcule seus Tokens</h3>
+            <input type="number" id="bnbInput" placeholder="Digite a quantidade de BNB">
+            <p id="result">Você receberá: 0 LMND</p>
+            <p id="bonus">Bônus: 0 LMND</p>
+            <p id="total">Total: 0 LMND</p>
+            <button onclick="calculateTokens('bnbInput', 'result', 'bonus', 'total')">Calcular</button>
+        </div>
+        <button class="buy-button" onclick="showLogin()">Comprar Tokens</button>
+    </div>
+
+    <div class="container hidden" id="login-page">
+        <h2>Login ou Registro</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button class="buy-button" onclick="login()">Entrar / Registrar</button>
+        <button class="buy-button" onclick="showHome()">Voltar à Página Inicial</button>
+    </div>
+
+    <div class="container hidden" id="dashboard-page">
+        <h2>Bem-vindo, <span id="user-name"></span></h2>
+        <p>Saldo de Tokens: <span id="user-balance">0</span> LMND</p>
+        <button class="buy-button" onclick="finalizePurchase()">Comprar Tokens</button>
+        <div id="purchase-info" class="hidden">
+            <h3>Como Concluir Sua Compra</h3>
+            <p>Transfira o valor correspondente em BNB para o seguinte endereço:</p>
+            <p><strong>Carteira:</strong> 0x22038ba97bf0662dA0F384Ce093b1d0726a84731</p>
+            <p>Obrigado por acreditar no projeto!</p>
+
+            <button class="buy-button" onclick="showHome()">Voltar à Página Inicial</button>
+        </div>
+    </div>
+
+    <div class="social-links">
+        <h2>Siga-nos nas redes sociais</h2>
+        <a href="https://x.com/TheLionMindofc" target="_blank">
+            <img src="image/twitter-x-logo-png_seeklogo-492396.png" alt="X" class="social-logo">
+        </a>
+        <a href="https://www.instagram.com/thelionmindofc/" target="_blank">
+            <img src="image/instagram.png" alt="Instagram" class="social-logo">
+        </a>
+        <a href="https://t.me/thelionmindofc" target="_blank">
+            <img src="image/logo-telegram.jpeg" alt="Telegram" class="social-logo">
+        </a>
+        <a href="https://www.tiktok.com/@thelionmindofc" target="_blank">
+            <img src="image/logo-tiktok.jpeg" alt="TikTok" class="social-logo">
+        </a>
+    </div>
+
+    <script src="index.js"></script>
+
+
+
+</body>
+
+</html>
