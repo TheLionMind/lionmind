@@ -80,9 +80,9 @@ body {
 }
 .section {
   background-color: #115302;
-  color: #121212;
+  color: #fffbfb;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 30px;
+  
   padding: 20px;
   border-radius: 10px;
   margin-top: 10px;
@@ -90,7 +90,7 @@ body {
 }
 .buy-button {
   background-color: #00ff00;
-  color: #121212;
+  color: #fdfdfd;
   padding: 15px 30px;
   font-size: 18px;
   border: none;
@@ -139,7 +139,7 @@ button.hover {
   background-color: #00ff00;
   text-align: center;
   line-height: 20px;
-  color: black;
+  color: rgb(249, 248, 248);
   font-weight: bold;
   border-radius: 5px;
 }
@@ -156,7 +156,7 @@ input {
 
 .progress-section {
   background-color: #115302;
-  color: #121212;
+  color: #ffffff;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   padding: 20px;
@@ -179,7 +179,7 @@ input {
   background-color: #00ff00;
   text-align: center;
   line-height: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
@@ -205,7 +205,7 @@ input {
 
 #dashboard-page {
   background-color: #06b406;
-  color: #121212;
+  color: #f9f4f4;
   font-size: 30px;
   border-radius: 40px;
   box-shadow: 20px;
