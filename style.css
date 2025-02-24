@@ -205,12 +205,21 @@ input {
 
 #dashboard-page {
   background-color: #06b406;
-  color: #f9f4f4;
+  color: white;
+  width: 100%;  /* Faz com que o elemento ocupe toda a largura disponível */
+  overflow: hidden;  /* Impede que o texto ultrapasse os limites */
+  text-overflow: ellipsis;  /* Adiciona "..." se o texto for muito grande */
+  white-space: nowrap;  /* Impede que o texto quebre para a linha de baixo */
+  word-wrap: break-word;  /* Faz com que o texto quebre em palavras se necessário */
+  font-size: 14px;  /* Ajuste conforme necessário */
+  padding: 10px;  /* Ajuste conforme necessário */
+  box-sizing: border-box;  /* Garante que o padding não cause estouro */
+  /*color: #f9f4f4;
   font-size: 30px;
   border-radius: 40px;
   box-shadow: 20px;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 50px;*/
 }
 
 
