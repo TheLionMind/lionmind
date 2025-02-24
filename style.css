@@ -1,4 +1,55 @@
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%; /* Ajusta o tamanho da página */
+    margin: 0 auto;
+}
+
+/* Ajustes para telas pequenas (celulares) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%; /* Aumenta a largura para preencher toda a tela */
+        padding: 20px;
+    }
+
+    .logo {
+        width: 70%; /* Ajusta o tamanho da logo */
+        margin: 0 auto;
+        display: block;
+    }
+
+    h1, h2, h3 {
+        font-size: 18px; /* Ajuste o tamanho das fontes */
+    }
+
+    .buy-button {
+        width: 100%; /* Faz o botão ocupar a tela toda no celular */
+        padding: 15px;
+    }
+
+    /* Ajusta os campos de input */
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .progress-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Ajusta a barra de progresso para o celular */
+    .progress-bar {
+        width: 100%;
+    }
+}
+body {
   background-image: url(image/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,7 +100,8 @@ button.hover {
 }
 
 .buy-button{
-    width: 500px;
+    width: 100%;
+    padding: 15px;
     height: 100px;
     font-size: 30px;
 }
@@ -60,6 +112,8 @@ button.hover {
   display: none;
 }
 .logo {
+    max-width: 100%;
+    height: auto;
   width: 300px;
   margin-bottom: 20px;
 }
