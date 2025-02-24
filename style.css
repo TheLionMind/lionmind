@@ -212,3 +212,29 @@ input {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+
+@media (max-width: 768px) {
+  /* Títulos pequenos em dispositivos móveis */
+  h1, h2, h3 {
+    font-size: 14px; /* Ajuste o valor conforme necessário */
+  }
+
+  /* Descrições maiores em dispositivos móveis */
+  p, .descricao {
+    font-size: 18px; /* Ajuste o valor conforme necessário */
+  }
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 769px) {
+  /* Títulos grandes em telas grandes */
+  h1, h2, h3 {
+    font-size: 24px; /* Ajuste o valor conforme necessário */
+  }
+
+  /* Descrições menores em telas grandes */
+  p, .descricao {
+    font-size: 16px; /* Ajuste o valor conforme necessário */
+  }
+}
