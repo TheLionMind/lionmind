@@ -222,15 +222,17 @@ input {
 
   /* Descrições maiores em dispositivos móveis */
   p, .descricao {
-    font-size: 18px; /* Ajuste o valor conforme necessário */
+    font-size: 25px; /* Ajuste o valor conforme necessário */
   }
 }
 
 /* Estilos para telas maiores */
 @media (min-width: 769px) {
   /* Títulos grandes em telas grandes */
-  h1, h2, h3 {
-    font-size: 24px; /* Ajuste o valor conforme necessário */
+  h1{
+    font-size: 30px;
+  } h2, h3 {
+    font-size: 30px; /* Ajuste o valor conforme necessário */
   }
 
   /* Descrições menores em telas grandes */
