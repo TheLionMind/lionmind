@@ -1,12 +1,18 @@
 
-        function calculateTokens(inputId, resultId, bonusId, totalId) {
-            let bnb = parseFloat(document.getElementById(inputId).value) || 0;
-            let tokens = bnb / 0.0001;
-            let bonus = bnb >= 0.25 ? tokens * 0.01 : 0;
-            document.getElementById(resultId).innerText = `Você receberá: ${tokens} LMND`;
-            document.getElementById(bonusId).innerText = `Bônus: ${bonus} LMND`;
-            document.getElementById(totalId).innerText = `Total: ${tokens + bonus} LMND`;
-        }
+       function calculateTokens(inputId, resultId, bonusId, totalId) {
+    let bnb = parseFloat(document.getElementById(inputId).value) || 0;
+    let tokens = bnb / 0.0001;
+    let bonus = bnb >= 0.25 ? tokens * 0.01 : 0;
+    let total = tokens + bonus;
+
+    // Formatação para exibir casas decimais no padrão brasileiro
+    let formatNumber = (num) => num.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+    document.getElementById(resultId).innerText = `Você receberá: ${formatNumber(tokens)} LMND`;
+    document.getElementById(bonusId).innerText = `Bônus: ${formatNumber(bonus)} LMND`;
+    document.getElementById(totalId).innerText = `Total: ${formatNumber(total)} LMND`;
+}
+
         
         function showLogin() {
             document.getElementById('main-page').classList.add('hidden');
