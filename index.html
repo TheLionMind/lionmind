@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,71 +28,82 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #1A1A2E;
             color: #F8F9FA;
             scroll-behavior: smooth;
         }
-        
+
+        .logo {
+            max-width: 70px;
+            max-height: 70px;
+
+        }
+
+        .logofooter {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
         .gradient-text {
             background: linear-gradient(90deg, #FF6B00, #FFD700);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        
+
         .gradient-bg {
             background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
         }
-        
+
         .token-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .token-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 180, 216, 0.2);
         }
-        
+
         .progress-bar {
             background: linear-gradient(90deg, #FF6B00, #FFD700);
             transition: width 1s ease-in-out;
         }
-        
+
         .social-icon {
             transition: all 0.3s ease;
         }
-        
+
         .social-icon:hover {
             transform: scale(1.1);
         }
-        
+
         .btn-primary {
             background: linear-gradient(90deg, #FF6B00, #FFD700);
             transition: all 0.3s ease;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 107, 0, 0.4);
         }
-        
+
         .btn-secondary {
             background: rgba(0, 180, 216, 0.1);
             border: 1px solid #00B4D8;
             transition: all 0.3s ease;
         }
-        
+
         .btn-secondary:hover {
             background: rgba(0, 180, 216, 0.2);
             transform: translateY(-2px);
         }
-        
+
         .feature-icon {
             font-size: 2.5rem;
             background: linear-gradient(135deg, #FF6B00, #FFD700);
@@ -99,62 +111,88 @@
             background-clip: text;
             color: transparent;
         }
-        
+
         .hidden {
             display: none;
         }
-        
+
         .animated {
             animation: fadeIn 1s ease-in-out;
         }
+
         
+
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body class="gradient-bg">
     <!-- Navigation -->
     <nav class="bg-dark/80 backdrop-blur-md fixed w-full z-50 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-30">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
+                    <img src="logo2.png" alt="" class="logo">
                     <div class="flex-shrink-0">
+
                         <span class="text-2xl font-bold gradient-text">LionMind</span>
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="#about" class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
-                            <a href="#tokenomics" class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Tokenomics</a>
-                            <a href="#roadmap" class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Roadmap</a>
-                            <a href="#presale" class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Pré-venda</a>
-                            <a href="#faq" class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
+                            <a href="#about"
+                                class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
+                            <a href="#tokenomics"
+                                class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Tokenomics</a>
+                            <a href="#roadmap"
+                                class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Roadmap</a>
+                            <a href="#presale"
+                                class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Pré-venda</a>
+                            <a href="#faq"
+                                class="text-light hover:text-primary px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
                         </div>
                     </div>
                 </div>
                 <div class="hidden md:block">
-                    <button onclick="showLogin()" class="btn-primary text-dark font-bold py-2 px-6 rounded-full text-sm">
+                    <button onclick="showLogin()"
+                        class="btn-primary text-dark font-bold py-2 px-6 rounded-full text-sm">
                         Área do Investidor <i class="fas fa-arrow-right ml-2"></i>
                     </button>
                 </div>
                 <div class="-mr-2 flex md:hidden">
-                    <button type="button" id="mobile-menu-button" class="text-light hover:text-primary inline-flex items-center justify-center p-2 rounded-md">
+                    <button type="button" id="mobile-menu-button"
+                        class="text-light hover:text-primary inline-flex items-center justify-center p-2 rounded-md">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile menu -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
-                <a href="#tokenomics" class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Tokenomics</a>
-                <a href="#roadmap" class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Roadmap</a>
-                <a href="#presale" class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Pré-venda</a>
-                <a href="#faq" class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
-                <button onclick="showLogin()" class="btn-primary text-dark font-bold py-2 px-6 rounded-full text-sm w-full mt-2">
+                <a href="#about"
+                    class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                <a href="#tokenomics"
+                    class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Tokenomics</a>
+                <a href="#roadmap"
+                    class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Roadmap</a>
+                <a href="#presale"
+                    class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Pré-venda</a>
+                <a href="#faq"
+                    class="text-light hover:text-primary block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
+                <button onclick="showLogin()"
+                    class="btn-primary text-dark font-bold py-2 px-6 rounded-full text-sm w-full mt-2">
                     Área do Investidor <i class="fas fa-arrow-right ml-2"></i>
                 </button>
             </div>
@@ -162,78 +200,97 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0 animated">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 font-title">
-                    <span class="gradient-text">LionMind (LMND)</span><br>
-                    A Moeda do Seu Crescimento
-                </h1>
-                <p class="text-lg text-gray-300 mb-8">
-                    Transforme seu desenvolvimento pessoal em valor real com a primeira criptomoeda que recompensa seu crescimento e produtividade.
-                </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button onclick="document.getElementById('presale').scrollIntoView({behavior: 'smooth'})" class="btn-primary text-dark font-bold py-3 px-8 rounded-full text-lg">
-                        Participar da Pré-venda <i class="fas fa-coins ml-2"></i>
-                    </button>
-                    <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" class="btn-secondary text-light font-bold py-3 px-8 rounded-full text-lg">
-                        Saiba Mais <i class="fas fa-info-circle ml-2"></i>
-                    </button>
-                </div>
-                <div class="mt-10 flex items-center space-x-4">
-                    <div class="flex -space-x-2">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-dark" alt="Investidor">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-dark" alt="Investidor">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-10 h-10 rounded-full border-2 border-dark" alt="Investidor">
-                    </div>
-                    <div>
-                        <p class="text-sm text-gray-300">Junte-se a <span class="text-primary font-bold">1,250+</span> investidores</p>
-                        <div class="flex items-center">
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>
-                            <i class="fas fa-star text-yellow-400 mr-1"></i>
-                            <span class="text-sm text-gray-300 ml-2">5.0 (250 avaliações)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="md:w-1/2 animated" style="animation-delay: 0.2s;">
-                <div class="relative">
-                    <div class="absolute -top-10 -left-10 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
-                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary rounded-full mix-blend-multiply filter blur-xl opacity-20"></div>
-                    <div class="relative bg-dark/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 shadow-xl">
-                        <div class="flex justify-between items-center mb-6">
-                            <div>
-                                <p class="text-gray-400">Saldo atual</p>
-                                <h3 class="text-2xl font-bold">LionMind (LMND)</h3>
-                            </div>
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
-                                <i class="fas fa-lion text-xl text-dark"></i>
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <h2 class="text-4xl font-bold gradient-text mb-2">10,000,000 LMND</h2>
-                            <p class="text-gray-400">≈ $1,250 USD</p>
-                        </div>
-                        <div class="bg-dark rounded-xl p-4 mb-6">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-400">Progresso da Pré-venda</span>
-                                <span class="text-primary font-bold">10%</span>
-                            </div>
-                            <div class="w-full bg-gray-800 rounded-full h-2.5">
-                                <div class="progress-bar h-2.5 rounded-full" style="width: 10%"></div>
-                            </div>
-                        </div>
-                        <button onclick="showLogin()" class="btn-primary w-full py-3 rounded-xl font-bold text-dark">
-                            Comprar LMND Agora <i class="fas fa-arrow-right ml-2"></i>
+    <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
+        <!-- Imagem de fundo com transparência -->
+        <div class="absolute inset-0 z-0 bg-[url('logo2.png')] bg-no-repeat bg-center bg-contain opacity-20 rounded-3xl"></div>
+    
+        <!-- Conteúdo original sobreposto -->
+        <div class="relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animated">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 font-title">
+                        <span class="gradient-text">LionMind (LMND)</span><br>
+                        A Moeda do Seu Crescimento
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Transforme seu desenvolvimento pessoal em valor real com a primeira criptomoeda que recompensa seu
+                        crescimento e produtividade.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button onclick="document.getElementById('presale').scrollIntoView({behavior: 'smooth'})"
+                            class="btn-primary text-dark font-bold py-3 px-8 rounded-full text-lg">
+                            Participar da Pré-venda <i class="fas fa-coins ml-2"></i>
                         </button>
+                        <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"
+                            class="btn-secondary text-light font-bold py-3 px-8 rounded-full text-lg">
+                            Saiba Mais <i class="fas fa-info-circle ml-2"></i>
+                        </button>
+                    </div>
+                    <div class="mt-10 flex items-center space-x-4">
+                        <div class="flex -space-x-2">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                class="w-10 h-10 rounded-full border-2 border-dark" alt="Investidor">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                class="w-10 h-10 rounded-full border-2 border-dark" alt="Investidor">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                                class="w-10 h-10 rounded-full border-2 border-dark" alt="Investidor">
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-300">Junte-se a <span class="text-primary font-bold">1,250+</span>
+                                investidores</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span class="text-sm text-gray-300 ml-2">5.0 (250 avaliações)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 animated" style="animation-delay: 0.2s;">
+                    <div class="relative">
+                        <div
+                            class="absolute -top-10 -left-10 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-xl opacity-20">
+                        </div>
+                        <div
+                            class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary rounded-full mix-blend-multiply filter blur-xl opacity-20">
+                        </div>
+                        <div class="relative bg-dark/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 shadow-xl">
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-gray-400">Saldo atual</p>
+                                    <h3 class="text-2xl font-bold">LionMind (LMND)</h3>
+                                </div>
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                                    <i class="fas fa-lion text-xl text-dark"></i>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <h2 class="text-4xl font-bold gradient-text mb-2">10,000,000 LMND</h2>
+                                <p class="text-gray-400">≈ $1,250 USD</p>
+                            </div>
+                            <div class="bg-dark rounded-xl p-4 mb-6">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Progresso da Pré-venda</span>
+                                    <span class="text-primary font-bold">10%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-2.5">
+                                    <div class="progress-bar h-2.5 rounded-full" style="width: 10%"></div>
+                                </div>
+                            </div>
+                            <button onclick="showLogin()" class="btn-primary w-full py-3 rounded-xl font-bold text-dark">
+                                Comprar LMND Agora <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- About Section -->
     <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -242,10 +299,11 @@
                 <span class="gradient-text">O Que é LionMind?</span>
             </h2>
             <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                LionMind (LMND) é a moeda digital revolucionária que transforma seu desenvolvimento pessoal em valor real, recompensando cada passo do seu crescimento.
+                LionMind (LMND) é a moeda digital revolucionária que transforma seu desenvolvimento pessoal em valor
+                real, recompensando cada passo do seu crescimento.
             </p>
         </div>
-        
+
         <div class="grid md:grid-cols-3 gap-8">
             <div class="token-card p-8 rounded-2xl">
                 <div class="feature-icon mb-4">
@@ -253,34 +311,38 @@
                 </div>
                 <h3 class="text-xl font-bold mb-3">Crescimento Recompensado</h3>
                 <p class="text-gray-300">
-                    Ganhe LMND ao completar cursos, desafios de aprendizado e atividades que impulsionam seu desenvolvimento pessoal e profissional.
+                    Ganhe LMND ao completar cursos, desafios de aprendizado e atividades que impulsionam seu
+                    desenvolvimento pessoal e profissional.
                 </p>
             </div>
-            
+
             <div class="token-card p-8 rounded-2xl">
                 <div class="feature-icon mb-4">
                     <i class="fas fa-trophy"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Reconhecimento Tangível</h3>
                 <p class="text-gray-300">
-                    Cada conquista se transforma em LMND, criando um histórico valioso do seu progresso que pode ser negociado ou utilizado.
+                    Cada conquista se transforma em LMND, criando um histórico valioso do seu progresso que pode ser
+                    negociado ou utilizado.
                 </p>
             </div>
-            
+
             <div class="token-card p-8 rounded-2xl">
                 <div class="feature-icon mb-4">
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Ecosistema Completo</h3>
                 <p class="text-gray-300">
-                    Em breve, integração com app de hábitos, NFTs colecionáveis e um marketplace exclusivo para troca de conhecimento e recompensas.
+                    Em breve, integração com app de hábitos, NFTs colecionáveis e um marketplace exclusivo para troca de
+                    conhecimento e recompensas.
                 </p>
             </div>
         </div>
-        
+
         <div class="mt-20 grid md:grid-cols-2 gap-12 items-center">
             <div class="animated" style="animation-delay: 0.1s;">
-                <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Desenvolvimento Pessoal" class="rounded-2xl shadow-xl w-full">
+                <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Desenvolvimento Pessoal" class="rounded-2xl shadow-xl w-full">
             </div>
             <div class="animated" style="animation-delay: 0.2s;">
                 <h3 class="text-2xl md:text-3xl font-bold mb-6 font-title">
@@ -289,40 +351,46 @@
                 <div class="space-y-6">
                     <div class="flex">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-8 w-8 rounded-full bg-primary/20 text-primary">
+                            <div
+                                class="flex items-center justify-center h-8 w-8 rounded-full bg-primary/20 text-primary">
                                 <i class="fas fa-check"></i>
                             </div>
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-bold">Motivação Transformada em Valor</h4>
                             <p class="text-gray-300 mt-1">
-                                LionMind é a primeira criptomoeda que realmente recompensa seu esforço pessoal, transformando disciplina em ativos digitais valiosos.
+                                LionMind é a primeira criptomoeda que realmente recompensa seu esforço pessoal,
+                                transformando disciplina em ativos digitais valiosos.
                             </p>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-8 w-8 rounded-full bg-primary/20 text-primary">
+                            <div
+                                class="flex items-center justify-center h-8 w-8 rounded-full bg-primary/20 text-primary">
                                 <i class="fas fa-check"></i>
                             </div>
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-bold">Tecnologia Com Propósito</h4>
                             <p class="text-gray-300 mt-1">
-                                Utilizamos blockchain para criar um sistema transparente e imutável de registro de conquistas, garantindo que cada LMND seja legitimamente conquistado.
+                                Utilizamos blockchain para criar um sistema transparente e imutável de registro de
+                                conquistas, garantindo que cada LMND seja legitimamente conquistado.
                             </p>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center h-8 w-8 rounded-full bg-primary/20 text-primary">
+                            <div
+                                class="flex items-center justify-center h-8 w-8 rounded-full bg-primary/20 text-primary">
                                 <i class="fas fa-check"></i>
                             </div>
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-bold">Comunidade de Alto Desempenho</h4>
                             <p class="text-gray-300 mt-1">
-                                Faça parte de uma rede de pessoas comprometidas com crescimento mútuo, onde o sucesso de um impulsiona o sucesso de todos.
+                                Faça parte de uma rede de pessoas comprometidas com crescimento mútuo, onde o sucesso de
+                                um impulsiona o sucesso de todos.
                             </p>
                         </div>
                     </div>
@@ -332,7 +400,8 @@
     </section>
 
     <!-- Tokenomics Section -->
-    <section id="tokenomics" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dark/50 rounded-3xl my-10">
+    <section id="tokenomics" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dark/50 rounded-3xl my-10"></section>
+
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 font-title">
                 <span class="gradient-text">Tokenomics</span>
@@ -341,7 +410,7 @@
                 Distribuição justa e estratégica para garantir o crescimento sustentável do ecossistema LionMind.
             </p>
         </div>
-        
+
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="animated" style="animation-delay: 0.1s;">
                 <div class="relative w-full max-w-md mx-auto">
@@ -355,12 +424,18 @@
                                 </div>
                             </div>
                             <svg viewBox="0 0 32 32" class="w-full h-full">
-                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#1A1A2E" stroke-width="2"></circle>
-                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#FF6B00" stroke-width="2" stroke-dasharray="25 75" stroke-dashoffset="25"></circle>
-                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#FFD700" stroke-width="2" stroke-dasharray="15 85" stroke-dashoffset="0"></circle>
-                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#00B4D8" stroke-width="2" stroke-dasharray="10 90" stroke-dashoffset="-40"></circle>
-                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#4CC9F0" stroke-width="2" stroke-dasharray="20 80" stroke-dashoffset="-50"></circle>
-                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#7209B7" stroke-width="2" stroke-dasharray="30 70" stroke-dashoffset="-70"></circle>
+                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#1A1A2E" stroke-width="2">
+                                </circle>
+                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#FF6B00" stroke-width="2"
+                                    stroke-dasharray="25 75" stroke-dashoffset="25"></circle>
+                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#FFD700" stroke-width="2"
+                                    stroke-dasharray="15 85" stroke-dashoffset="0"></circle>
+                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#00B4D8" stroke-width="2"
+                                    stroke-dasharray="10 90" stroke-dashoffset="-40"></circle>
+                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#4CC9F0" stroke-width="2"
+                                    stroke-dasharray="20 80" stroke-dashoffset="-50"></circle>
+                                <circle cx="16" cy="16" r="15.9155" fill="none" stroke="#7209B7" stroke-width="2"
+                                    stroke-dasharray="30 70" stroke-dashoffset="-70"></circle>
                             </svg>
                         </div>
                     </div>
@@ -373,7 +448,8 @@
                         <div class="ml-4">
                             <h4 class="text-lg font-bold">25% - Pré-venda</h4>
                             <p class="text-gray-300 mt-1">
-                                Oferta inicial com bônus exclusivos para primeiros investidores que acreditam no projeto.
+                                Oferta inicial com bônus exclusivos para primeiros investidores que acreditam no
+                                projeto.
                             </p>
                         </div>
                     </div>
@@ -419,7 +495,9 @@
     </section>
 
     <!-- Roadmap Section -->
-    <section id="roadmap" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="roadmap" class="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
+        <div class="absolute inset-0 z-0 bg-[url('/logo2.png')] bg-no-repeat bg-center bg-cover opacity-20 rounded-3xl"></div>
+        <div class="relative z-10">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 font-title">
                 <span class="gradient-text">Nosso Roadmap</span>
@@ -428,11 +506,13 @@
                 O caminho para revolucionar como valorizamos o desenvolvimento pessoal e profissional.
             </p>
         </div>
-        
+
         <div class="relative">
             <!-- Line -->
-            <div class="hidden md:block absolute left-1/2 h-full w-1 bg-gradient-to-b from-primary to-secondary transform -translate-x-1/2"></div>
-            
+            <div
+                class="hidden md:block absolute left-1/2 h-full w-1 bg-gradient-to-b from-primary to-secondary transform -translate-x-1/2">
+            </div>
+
             <!-- Items -->
             <div class="space-y-8 md:space-y-16">
                 <!-- Item 1 -->
@@ -440,91 +520,111 @@
                     <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 md:text-right">
                         <div class="token-card p-6 rounded-2xl">
                             <div class="flex items-center justify-center md:justify-end">
-                                <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-dark font-bold text-lg mr-4">Q3</span>
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-dark font-bold text-lg mr-4">Q3</span>
                                 <h3 class="text-xl font-bold">Lançamento da Pré-venda</h3>
                             </div>
                             <p class="text-gray-300 mt-4">
-                                Início da captação de recursos para desenvolvimento da plataforma com bônus exclusivos para primeiros investidores.
+                                Início da captação de recursos para desenvolvimento da plataforma com bônus exclusivos
+                                para primeiros investidores.
                             </p>
                         </div>
                     </div>
-                    <div class="hidden md:block absolute left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2"></div>
+                    <div
+                        class="hidden md:block absolute left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2">
+                    </div>
                     <div class="md:w-1/2 md:pl-16">
                         <!-- Empty on purpose for alignment -->
                     </div>
                 </div>
-                
+
                 <!-- Item 2 -->
                 <div class="relative flex flexocol md:flex-row items-center">
                     <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0">
                         <!-- Empty on purpose for alignment -->
                     </div>
-                    <div class="hidden md:block absolute left-1/2 w-4 h-4 bg-secondary rounded-full transform -translate-x-1/2"></div>
+                    <div
+                        class="hidden md:block absolute left-1/2 w-4 h-4 bg-secondary rounded-full transform -translate-x-1/2">
+                    </div>
                     <div class="md:w-1/2 md:pl-16">
                         <div class="token-card p-6 rounded-2xl">
                             <div class="flex items-center">
-                                <span class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-dark font-bold text-lg mr-4">Q4</span>
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-dark font-bold text-lg mr-4">Q4</span>
                                 <h3 class="text-xl font-bold">MVP da Plataforma</h3>
                             </div>
                             <p class="text-gray-300 mt-4">
-                                Versão inicial da plataforma com sistema básico de recompensas por atividades de desenvolvimento pessoal.
+                                Versão inicial da plataforma com sistema básico de recompensas por atividades de
+                                desenvolvimento pessoal.
                             </p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Item 3 -->
                 <div class="relative flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 md:text-right">
                         <div class="token-card p-6 rounded-2xl">
                             <div class="flex items-center justify-center md:justify-end">
-                                <span class="flex items-center justify-center w-12 h-12 rounded-full bg-accent text-dark font-bold text-lg mr-4">Q1</span>
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 rounded-full bg-accent text-dark font-bold text-lg mr-4">Q1</span>
                                 <h3 class="text-xl font-bold">Listagem em Exchanges</h3>
                             </div>
                             <p class="text-gray-300 mt-4">
-                                LMND disponível para negociação em exchanges descentralizadas e planejamento para listagem em exchanges centralizadas.
+                                LMND disponível para negociação em exchanges descentralizadas e planejamento para
+                                listagem em exchanges centralizadas.
                             </p>
                         </div>
                     </div>
-                    <div class="hidden md:block absolute left-1/2 w-4 h-4 bg-accent rounded-full transform -translate-x-1/2"></div>
+                    <div
+                        class="hidden md:block absolute left-1/2 w-4 h-4 bg-accent rounded-full transform -translate-x-1/2">
+                    </div>
                     <div class="md:w-1/2 md:pl-16">
                         <!-- Empty on purpose for alignment -->
                     </div>
                 </div>
-                
+
                 <!-- Item 4 -->
                 <div class="relative flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0">
                         <!-- Empty on purpose for alignment -->
                     </div>
-                    <div class="hidden md:block absolute left-1/2 w-4 h-4 bg-purple-600 rounded-full transform -translate-x-1/2"></div>
+                    <div
+                        class="hidden md:block absolute left-1/2 w-4 h-4 bg-purple-600 rounded-full transform -translate-x-1/2">
+                    </div>
                     <div class="md:w-1/2 md:pl-16">
                         <div class="token-card p-6 rounded-2xl">
                             <div class="flex items-center">
-                                <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600 text-dark font-bold text-lg mr-4">Q2</span>
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600 text-dark font-bold text-lg mr-4">Q2</span>
                                 <h3 class="text-xl font-bold">Lançamento do App</h3>
                             </div>
                             <p class="text-gray-300 mt-4">
-                                Aplicativo móvel com sistema de acompanhamento de hábitos, desafios personalizados e integração completa com LMND.
+                                Aplicativo móvel com sistema de acompanhamento de hábitos, desafios personalizados e
+                                integração completa com LMND.
                             </p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Item 5 -->
                 <div class="relative flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 md:text-right">
                         <div class="token-card p-6 rounded-2xl">
                             <div class="flex items-center justify-center md:justify-end">
-                                <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-400 text-dark font-bold text-lg mr-4">Q3</span>
+                                <span
+                                    class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-400 text-dark font-bold text-lg mr-4">Q3</span>
                                 <h3 class="text-xl font-bold">NFTs de Conquista</h3>
                             </div>
                             <p class="text-gray-300 mt-4">
-                                Colecionáveis digitais exclusivos para marcar conquistas significativas no desenvolvimento pessoal dos usuários.
+                                Colecionáveis digitais exclusivos para marcar conquistas significativas no
+                                desenvolvimento pessoal dos usuários.
                             </p>
                         </div>
                     </div>
-                    <div class="hidden md:block absolute left-1/2 w-4 h-4 bg-blue-400 rounded-full transform -translate-x-1/2"></div>
+                    <div
+                        class="hidden md:block absolute left-1/2 w-4 h-4 bg-blue-400 rounded-full transform -translate-x-1/2">
+                    </div>
                     <div class="md:w-1/2 md:pl-16">
                         <!-- Empty on purpose for alignment -->
                     </div>
@@ -543,7 +643,7 @@
                 Garanta seus LMND com bônus exclusivos durante o período de pré-venda.
             </p>
         </div>
-        
+
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="animated" style="animation-delay: 0.1s;">
                 <div class="token-card p-8 rounded-2xl">
@@ -554,7 +654,7 @@
                         </div>
                         <div class="text-2xl font-bold gradient-text">10%</div>
                     </div>
-                    
+
                     <div class="mb-8">
                         <div class="w-full bg-gray-800 rounded-full h-3 mb-2">
                             <div class="progress-bar h-3 rounded-full" style="width: 10%"></div>
@@ -564,7 +664,7 @@
                             <span>500 BNB</span>
                         </div>
                     </div>
-                    
+
                     <div class="grid grid-cols-3 gap-4 mb-8">
                         <div class="bg-dark/50 p-4 rounded-xl text-center">
                             <p class="text-gray-400 text-sm">Preço Atual</p>
@@ -579,7 +679,7 @@
                             <p class="text-xl font-bold gradient-text">+25%</p>
                         </div>
                     </div>
-                    
+
                     <div class="mb-6">
                         <h4 class="font-bold mb-2">Fases da Pré-venda</h4>
                         <div class="space-y-2">
@@ -601,27 +701,28 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <button onclick="showLogin()" class="btn-primary w-full py-3 rounded-xl font-bold text-dark">
                         Participar Agora <i class="fas fa-arrow-right ml-2"></i>
                     </button>
                 </div>
             </div>
-            
+
             <div class="animated" style="animation-delay: 0.2s;">
                 <div class="token-card p-8 rounded-2xl">
                     <h3 class="text-2xl font-bold mb-6">Calculadora de Tokens</h3>
-                    
+
                     <div class="mb-6">
                         <label for="bnbInput" class="block text-gray-400 mb-2">Quantidade de BNB</label>
                         <div class="relative">
-                            <input type="number" id="bnbInput" placeholder="0.00" class="w-full bg-dark/50 border border-gray-700 rounded-xl py-3 px-4 text-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="number" id="bnbInput" placeholder="0.00"
+                                class="w-full bg-dark/50 border border-gray-700 rounded-xl py-3 px-4 text-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                             <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                                 <span class="text-gray-400">BNB</span>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mb-6">
                         <label class="block text-gray-400 mb-2">Você receberá</label>
                         <div class="bg-dark/50 p-4 rounded-xl">
@@ -639,13 +740,15 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <button onclick="calculateTokens('bnbInput', 'result', 'bonus', 'total')" class="btn-secondary w-full py-3 rounded-xl font-bold mb-4">
+
+                    <button onclick="calculateTokens('bnbInput', 'result', 'bonus', 'total')"
+                        class="btn-secondary w-full py-3 rounded-xl font-bold mb-4">
                         Calcular <i class="fas fa-calculator ml-2"></i>
                     </button>
-                    
+
                     <div class="text-sm text-gray-400">
-                        <p class="mb-2"><i class="fas fa-info-circle mr-2 text-primary"></i> Preço atual: 1 LMND = 0.0001 BNB</p>
+                        <p class="mb-2"><i class="fas fa-info-circle mr-2 text-primary"></i> Preço atual: 1 LMND =
+                            0.0001 BNB</p>
                         <p><i class="fas fa-gift mr-2 text-primary"></i> Bônus de 25% aplicado automaticamente</p>
                     </div>
                 </div>
@@ -654,8 +757,9 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+    <section id="faq" class="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
+        <div class="absolute inset-0 z-0 bg-[url('/logo2.png')] bg-no-repeat bg-center bg-contain opacity-20 rounded-3xl"></div>
+        <div class="relative z-10">        <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 font-title">
                 <span class="gradient-text">Perguntas Frequentes</span>
             </h2>
@@ -663,77 +767,95 @@
                 Tire suas dúvidas sobre o LionMind e como participar da pré-venda.
             </p>
         </div>
-        
+
         <div class="max-w-3xl mx-auto">
             <div class="space-y-4">
                 <div class="token-card p-6 rounded-2xl">
-                    <button class="faq-question flex justify-between items-center w-full text-left" onclick="toggleFAQ(this)">
+                    <button class="faq-question flex justify-between items-center w-full text-left"
+                        onclick="toggleFAQ(this)">
                         <h3 class="text-lg font-bold">O que é LionMind (LMND)?</h3>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-answer mt-4 hidden">
                         <p class="text-gray-300">
-                            LionMind (LMND) é a primeira criptomoeda que recompensa seu desenvolvimento pessoal e profissional. Ao completar cursos, desafios de aprendizado e atividades produtivas, você ganha LMND, transformando seu crescimento em valor real.
+                            LionMind (LMND) é a primeira criptomoeda que recompensa seu desenvolvimento pessoal e
+                            profissional. Ao completar cursos, desafios de aprendizado e atividades produtivas, você
+                            ganha LMND, transformando seu crescimento em valor real.
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="token-card p-6 rounded-2xl">
-                    <button class="faq-question flex justify-between items-center w-full text-left" onclick="toggleFAQ(this)">
+                    <button class="faq-question flex justify-between items-center w-full text-left"
+                        onclick="toggleFAQ(this)">
                         <h3 class="text-lg font-bold">Como posso participar da pré-venda?</h3>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-answer mt-4 hidden">
                         <p class="text-gray-300">
-                            Para participar da pré-venda, basta clicar no botão "Participar Agora", criar uma conta em nossa plataforma e seguir as instruções para enviar BNB (BEP-20) para o endereço: 0x22038ba97bf0662dA0F384Ce093b1d0726a84731. Você receberá seus LMND imediatamente com o bônus correspondente à fase atual.
+                            Para participar da pré-venda, basta clicar no botão "Participar Agora", criar uma conta em
+                            nossa plataforma e seguir as instruções para enviar BNB (BEP-20) para o endereço:
+                            0x22038ba97bf0662dA0F384Ce093b1d0726a84731. Você receberá seus LMND imediatamente com o
+                            bônus correspondente à fase atual.
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="token-card p-6 rounded-2xl">
-                    <button class="faq-question flex justify-between items-center w-full text-left" onclick="toggleFAQ(this)">
+                    <button class="faq-question flex justify-between items-center w-full text-left"
+                        onclick="toggleFAQ(this)">
                         <h3 class="text-lg font-bold">Quando receberei meus tokens LMND?</h3>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-answer mt-4 hidden">
                         <p class="text-gray-300">
-                            Os tokens comprados na pré-venda serão distribuídos imediatamente após a confirmação da transação em sua conta LionMind. Eles ficarão disponíveis para uso assim que a plataforma for lançada oficialmente.
+                            Os tokens comprados na pré-venda serão distribuídos imediatamente após a confirmação da
+                            transação em sua conta LionMind. Eles ficarão disponíveis para uso assim que a plataforma
+                            for lançada oficialmente.
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="token-card p-6 rounded-2xl">
-                    <button class="faq-question flex justify-between items-center w-full text-left" onclick="toggleFAQ(this)">
+                    <button class="faq-question flex justify-between items-center w-full text-left"
+                        onclick="toggleFAQ(this)">
                         <h3 class="text-lg font-bold">Como funcionam os bônus da pré-venda?</h3>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-answer mt-4 hidden">
                         <p class="text-gray-300">
-                            Os bônus são calculados com base no progresso da pré-venda. Quanto mais cedo você participar, maior será o bônus recebido. Atualmente estamos na Fase 1 com 25% de bônus. O bônus é adicionado automaticamente ao seu saldo de LMND.
+                            Os bônus são calculados com base no progresso da pré-venda. Quanto mais cedo você
+                            participar, maior será o bônus recebido. Atualmente estamos na Fase 1 com 25% de bônus. O
+                            bônus é adicionado automaticamente ao seu saldo de LMND.
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="token-card p-6 rounded-2xl">
-                    <button class="faq-question flex justify-between items-center w-full text-left" onclick="toggleFAQ(this)">
+                    <button class="faq-question flex justify-between items-center w-full text-left"
+                        onclick="toggleFAQ(this)">
                         <h3 class="text-lg font-bold">Em quais blockchains LMND estará disponível?</h3>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-answer mt-4 hidden">
                         <p class="text-gray-300">
-                            Inicialmente, LMND será um token BEP-20 na Binance Smart Chain (BSC), com planos para expansão para outras redes como Ethereum e Polygon no futuro.
+                            Inicialmente, LMND será um token BEP-20 na Binance Smart Chain (BSC), com planos para
+                            expansão para outras redes como Ethereum e Polygon no futuro.
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="token-card p-6 rounded-2xl">
-                    <button class="faq-question flex justify-between items-center w-full text-left" onclick="toggleFAQ(this)">
+                    <button class="faq-question flex justify-between items-center w-full text-left"
+                        onclick="toggleFAQ(this)">
                         <h3 class="text-lg font-bold">Como posso ganhar LMND após o lançamento?</h3>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
                     <div class="faq-answer mt-4 hidden">
                         <p class="text-gray-300">
-                            Após o lançamento, você poderá ganhar LMND completando atividades de desenvolvimento pessoal no nosso aplicativo, como finalizar cursos, atingir metas de leitura, manter hábitos saudáveis e participar de desafios comunitários.
+                            Após o lançamento, você poderá ganhar LMND completando atividades de desenvolvimento pessoal
+                            no nosso aplicativo, como finalizar cursos, atingir metas de leitura, manter hábitos
+                            saudáveis e participar de desafios comunitários.
                         </p>
                     </div>
                 </div>
@@ -748,12 +870,15 @@
                 <span class="gradient-text">Pronto para Transformar Seu Crescimento em Valor?</span>
             </h2>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-                Participe da pré-venda do LionMind hoje e garanta seus tokens com bônus exclusivos enquanto apoia a revolução no desenvolvimento pessoal.
+                Participe da pré-venda do LionMind hoje e garanta seus tokens com bônus exclusivos enquanto apoia a
+                revolução no desenvolvimento pessoal.
             </p>
-            <button onclick="showLogin()" class="btn-primary text-dark font-bold py-4 px-12 rounded-full text-lg mx-2 mb-4">
+            <button onclick="showLogin()"
+                class="btn-primary text-dark font-bold py-4 px-12 rounded-full text-lg mx-2 mb-4">
                 Participar da Pré-venda <i class="fas fa-arrow-right ml-2"></i>
             </button>
-            <button onclick="document.getElementById('presale').scrollIntoView({behavior: 'smooth'})" class="btn-secondary text-light font-bold py-4 px-12 rounded-full text-lg mx-2">
+            <button onclick="document.getElementById('presale').scrollIntoView({behavior: 'smooth'})"
+                class="btn-secondary text-light font-bold py-4 px-12 rounded-full text-lg mx-2">
                 Saiba Mais <i class="fas fa-info-circle ml-2"></i>
             </button>
         </div>
@@ -765,28 +890,31 @@
             <button onclick="hideLogin()" class="absolute top-4 right-4 text-gray-400 hover:text-light">
                 <i class="fas fa-times text-2xl"></i>
             </button>
-            
+
             <h2 class="text-2xl font-bold mb-2 text-center">
                 <span class="gradient-text">Área do Investidor</span>
             </h2>
             <p class="text-gray-400 text-center mb-8">Acesse sua conta ou registre-se</p>
-            
+
             <div class="mb-6">
                 <label for="modal-username" class="block text-gray-400 mb-2">Usuário</label>
-                <input type="text" id="modal-username" placeholder="Seu usuário" class="w-full bg-dark/50 border border-gray-700 rounded-xl py-3 px-4 text-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                <input type="text" id="modal-username" placeholder="Seu usuário"
+                    class="w-full bg-dark/50 border border-gray-700 rounded-xl py-3 px-4 text-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
             </div>
-            
+
             <div class="mb-6">
                 <label for="modal-password" class="block text-gray-400 mb-2">Senha</label>
-                <input type="password" id="modal-password" placeholder="Sua senha" class="w-full bg-dark/50 border border-gray-700 rounded-xl py-3 px-4 text-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                <input type="password" id="modal-password" placeholder="Sua senha"
+                    class="w-full bg-dark/50 border border-gray-700 rounded-xl py-3 px-4 text-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
             </div>
-            
+
             <button onclick="login()" class="btn-primary w-full py-3 rounded-xl font-bold text-dark mb-4">
                 Entrar / Registrar <i class="fas fa-sign-in-alt ml-2"></i>
             </button>
-            
+
             <div class="text-center text-sm text-gray-400">
-                <p>Ao continuar, você concorda com nossos <a href="#" class="text-primary hover:underline">Termos de Serviço</a> e <a href="#" class="text-primary hover:underline">Política de Privacidade</a>.</p>
+                <p>Ao continuar, você concorda com nossos <a href="#" class="text-primary hover:underline">Termos de
+                        Serviço</a> e <a href="#" class="text-primary hover:underline">Política de Privacidade</a>.</p>
             </div>
         </div>
     </div>
@@ -797,12 +925,12 @@
             <button onclick="hideDashboard()" class="absolute top-4 right-4 text-gray-400 hover:text-light">
                 <i class="fas fa-times text-2xl"></i>
             </button>
-            
+
             <h2 class="text-2xl font-bold mb-2 text-center">
                 Bem-vindo, <span id="modal-user-name" class="gradient-text">Investidor</span>
             </h2>
             <p class="text-gray-400 text-center mb-8">Gerencie seus investimentos em LionMind</p>
-            
+
             <div class="token-card p-6 rounded-xl mb-6">
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-gray-400">Saldo de LMND</span>
@@ -813,20 +941,21 @@
                     <span class="text-xl font-bold gradient-text">$0.00</span>
                 </div>
             </div>
-            
+
             <div id="purchase-section">
                 <h3 class="text-lg font-bold mb-4">Comprar LMND</h3>
-                
+
                 <div class="mb-6">
                     <label for="dashboard-bnb" class="block text-gray-400 mb-2">Quantidade de BNB</label>
                     <div class="relative">
-                        <input type="number" id="dashboard-bnb" placeholder="0.00" class="w-full bg-dark/50 border border-gray-700 rounded-xl py-3 px-4 text-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <input type="number" id="dashboard-bnb" placeholder="0.00"
+                            class="w-full bg-dark/50 border border-gray-700 rounded-xl py-3 px-4 text-light focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
                         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                             <span class="text-gray-400">BNB</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="mb-6">
                     <label class="block text-gray-400 mb-2">Você receberá</label>
                     <div class="bg-dark/50 p-4 rounded-xl">
@@ -844,40 +973,46 @@
                         </div>
                     </div>
                 </div>
-                
-                <button onclick="calculateTokens('dashboard-bnb', 'dashboard-result', 'dashboard-bonus', 'dashboard-total')" class="btn-secondary w-full py-3 rounded-xl font-bold mb-4">
+
+                <button
+                    onclick="calculateTokens('dashboard-bnb', 'dashboard-result', 'dashboard-bonus', 'dashboard-total')"
+                    class="btn-secondary w-full py-3 rounded-xl font-bold mb-4">
                     Calcular <i class="fas fa-calculator ml-2"></i>
                 </button>
-                
-                <button onclick="finalizePurchase()" class="btn-primary w-full py-3 rounded-xl font-bold text-dark mb-4">
+
+                <button onclick="finalizePurchase()"
+                    class="btn-primary w-full py-3 rounded-xl font-bold text-dark mb-4">
                     Comprar LMND <i class="fas fa-coins ml-2"></i>
                 </button>
             </div>
-            
+
             <div id="purchase-info" class="hidden">
                 <h3 class="text-lg font-bold mb-4">Como Concluir Sua Compra</h3>
                 <p class="text-gray-300 mb-4">
-                    Para finalizar sua compra de LMND, envie o valor correspondente em BNB (BEP-20) para o seguinte endereço:
+                    Para finalizar sua compra de LMND, envie o valor correspondente em BNB (BEP-20) para o seguinte
+                    endereço:
                 </p>
-                
+
                 <div class="bg-dark/70 p-4 rounded-xl mb-6">
                     <div class="flex items-center justify-between mb-2">
                         <span class="text-gray-400">Carteira:</span>
-                        <button onclick="copyToClipboard('0x22038ba97bf0662dA0F384Ce093b1d0726a84731')" class="text-primary hover:text-secondary">
+                        <button onclick="copyToClipboard('0x22038ba97bf0662dA0F384Ce093b1d0726a84731')"
+                            class="text-primary hover:text-secondary">
                             <i class="fas fa-copy"></i>
                         </button>
                     </div>
                     <p class="text-sm font-mono break-all">0x22038ba97bf0662dA0F384Ce093b1d0726a84731</p>
                 </div>
-                
+
                 <p class="text-gray-300 mb-4">
                     Assim que a transação for confirmada, seus LMND serão creditados automaticamente em sua conta.
                 </p>
-                
+
                 <p class="text-gray-300 mb-6">
-                    <i class="fas fa-exclamation-triangle text-yellow-400 mr-2"></i> Envie apenas BNB (BEP-20). Não envie outros tokens ou de outras redes.
+                    <i class="fas fa-exclamation-triangle text-yellow-400 mr-2"></i> Envie apenas BNB (BEP-20). Não
+                    envie outros tokens ou de outras redes.
                 </p>
-                
+
                 <button onclick="hideDashboard()" class="btn-secondary w-full py-3 rounded-xl font-bold">
                     Voltar <i class="fas fa-arrow-left ml-2"></i>
                 </button>
@@ -890,73 +1025,85 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold gradient-text mb-4">LionMind</h3>
+                    <img src="logo2.png" alt="" class="logofooter">
+
                     <p class="text-gray-400">
-                        A moeda digital que recompensa seu desenvolvimento pessoal e transforma crescimento em valor real.
+                        A moeda digital que recompensa seu desenvolvimento pessoal e transforma crescimento em valor
+                        real.
                     </p>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-bold text-light mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
                         <li><a href="#about" class="text-gray-400 hover:text-primary transition">Sobre</a></li>
-                        <li><a href="#tokenomics" class="text-gray-400 hover:text-primary transition">Tokenomics</a></li>
+                        <li><a href="#tokenomics" class="text-gray-400 hover:text-primary transition">Tokenomics</a>
+                        </li>
                         <li><a href="#roadmap" class="text-gray-400 hover:text-primary transition">Roadmap</a></li>
                         <li><a href="#presale" class="text-gray-400 hover:text-primary transition">Pré-venda</a></li>
                         <li><a href="#faq" class="text-gray-400 hover:text-primary transition">FAQ</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-bold text-light mb-4">Documentos</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-primary transition">Whitepaper</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-primary transition">Termos de Serviço</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Política de Privacidade</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Contrato Inteligente</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Política de Privacidade</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Contrato Inteligente</a>
+                        </li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-bold text-light mb-4">Redes Sociais</h3>
                     <div class="flex space-x-4">
-                        <a href="https://x.com/TheLionMindofc" target="_blank" class="social-icon text-gray-400 hover:text-primary text-xl">
+                        <a href="https://x.com/TheLionMindofc" target="_blank"
+                            class="social-icon text-gray-400 hover:text-primary text-xl">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://www.instagram.com/sonhado.sucesso/" target="_blank" class="social-icon text-gray-400 hover:text-primary text-xl">
+                        <a href="https://www.instagram.com/sonhado.sucesso/" target="_blank"
+                            class="social-icon text-gray-400 hover:text-primary text-xl">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://t.me/thelionmindofc" target="_blank" class="social-icon text-gray-400 hover:text-primary text-xl">
+                        <a href="https://t.me/thelionmindofc" target="_blank"
+                            class="social-icon text-gray-400 hover:text-primary text-xl">
                             <i class="fab fa-telegram"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@aforjadehomens" target="_blank" class="social-icon text-gray-400 hover:text-primary text-xl">
+                        <a href="https://www.tiktok.com/@aforjadehomens" target="_blank"
+                            class="social-icon text-gray-400 hover:text-primary text-xl">
                             <i class="fab fa-tiktok"></i>
                         </a>
                         <a href="#" target="_blank" class="social-icon text-gray-400 hover:text-primary text-xl">
                             <i class="fab fa-discord"></i>
                         </a>
                     </div>
-                    
+
                     <h3 class="text-lg font-bold text-light mt-6 mb-4">Assine nossa newsletter</h3>
                     <div class="flex">
-                        <input type="email" placeholder="Seu e-mail" class="bg-dark/50 text-light py-2 px-4 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-primary w-full">
-                        <button class="bg-primary text-dark font-bold py-2 px-4 rounded-r-lg hover:bg-secondary transition">
+                        <input type="email" placeholder="Seu e-mail"
+                            class="bg-dark/50 text-light py-2 px-4 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-primary w-full">
+                        <button
+                            class="bg-primary text-dark font-bold py-2 px-4 rounded-r-lg hover:bg-secondary transition">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
                 <p>&copy; 2023 LionMind. Todos os direitos reservados.</p>
-                <p class="mt-2 text-sm">LionMind não é um conselho financeiro. Criptomoedas são investimentos de risco.</p>
+                <p class="mt-2 text-sm">LionMind não é um conselho financeiro. Criptomoedas são investimentos de risco.
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -965,7 +1112,7 @@
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
             const icon = button.querySelector('i');
-            
+
             answer.classList.toggle('hidden');
             icon.classList.toggle('rotate-180');
         }
@@ -997,7 +1144,7 @@
         // Login function
         function login() {
             const username = document.getElementById('modal-username').value;
-            
+
             if (username) {
                 document.getElementById('modal-user-name').textContent = username;
                 hideLogin();
@@ -1025,15 +1172,15 @@
             const bnbAmount = parseFloat(input.value) || 0;
             const tokenPrice = 0.0001; // 1 LMND = 0.0001 BNB
             const bonusPercentage = 0.25; // 25% bonus
-            
+
             const tokens = bnbAmount / tokenPrice;
             const bonus = tokens * bonusPercentage;
             const total = tokens + bonus;
-            
+
             document.getElementById(resultId).textContent = Math.floor(tokens).toLocaleString() + ' LMND';
             document.getElementById(bonusId).textContent = Math.floor(bonus).toLocaleString() + ' LMND';
             document.getElementById(totalId).textContent = Math.floor(total).toLocaleString() + ' LMND';
-            
+
             // Update user balance in dashboard if this is the dashboard calculator
             if (inputId === 'dashboard-bnb') {
                 const currentBalance = parseInt(document.getElementById('modal-user-balance').textContent) || 0;
@@ -1044,11 +1191,11 @@
         // Animate elements when they come into view
         function animateOnScroll() {
             const elements = document.querySelectorAll('.animated');
-            
+
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight / 1.2;
-                
+
                 if (elementPosition < screenPosition) {
                     element.classList.add('animated');
                 }
@@ -1059,4 +1206,5 @@
         document.addEventListener('DOMContentLoaded', animateOnScroll);
     </script>
 </body>
+
 </html>
